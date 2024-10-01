@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+#container {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.slide {
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 8px;
+    width: 20vw;
+    height: 70vh;
+    background-color: rgb(29, 27, 27);
+    padding: 12px;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    background-color: transparent;
+    border-color: transparent;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#left-arrow, #right-arrow {
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#circles button {
+    color: white;
+}
