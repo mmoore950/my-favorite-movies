@@ -15,6 +15,12 @@ const leftArrow = document.getElementById('left-arrow')
 function carousel(num) {
     index = (index + num + imageArray.length) % imageArray.length
     image.src = imageArray[index]
+    circles.forEach((circle) => {
+        circle.style.color = 'white'
+    })
+    let curr = document.getElementById(index.toString())
+    curr.style.color = 'red'
+
 }
 
 rightArrow.addEventListener('click', () => {
@@ -25,18 +31,11 @@ leftArrow.addEventListener('click', () => {
     carousel(-1)
 })
 
-function circleButtons(button) {
-    circles.forEach((circle) => {
-        circle.style.color = 'white'
-    })
-    image.src = imageArray[Number(button.id)]
-    button.style.color = 'red'
-}
-
 const circles = document.querySelectorAll('.circle')
 circles.forEach((element) => {
     element.addEventListener('click', () => {
-        circleButtons(element)
+        let num = (element.id - (index % imageArray.length) + imageArray.length) % imageArray.length
+        carousel(num)
     })
 })
 
